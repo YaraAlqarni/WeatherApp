@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <!-- Input field for location -->
+        <EditText
+            android:id="@+id/locationInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/location_hint"
+            android:inputType="text"
+            android:backgroundTint="@color/primary_blue"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/searchButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button to search for weather -->
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:backgroundTint="@color/accent_yellow"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/unitSwitchButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationInput" />
+
+        <!-- Button to switch between Celsius and Fahrenheit -->
+        <Button
+            android:id="@+id/unitSwitchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_unit"
+            android:backgroundTint="@color/primary_blue"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/temperatureText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchButton" />
+
+        <!-- Display for temperature -->
+        <TextView
+            android:id="@+id/temperatureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:textSize="30sp"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/humidityText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/unitSwitchButton" />
+
+        <!-- Display for humidity -->
+        <TextView
+            android:id="@+id/humidityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/humidity"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/windSpeedText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temperatureText" />
+
+        <!-- Display for wind speed -->
+        <TextView
+            android:id="@+id/windSpeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind_speed"
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/weatherConditionText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/humidityText" />
+
+        <!-- Display for weather condition -->
+        <TextView
+            android:id="@+id/weatherConditionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weather_condition"
+            android:textSize="24sp"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toTopOf="@id/weatherImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/windSpeedText" />
+
+        <!-- Image for weather condition -->
+        <ImageView
+            android:id="@+id/weatherImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/mainp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weatherConditionText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

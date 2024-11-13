@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">weatherApp</string>
+    <string name="location_hint">Enter city or zip code</string>
+    <string name="search">Search</string>
+    <string name="switch_unit">Switch Unit</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="weather_condition">Weather Condition</string>
+</resources>
